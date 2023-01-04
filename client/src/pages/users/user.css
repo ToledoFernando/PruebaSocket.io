@@ -9,8 +9,10 @@
 }
 
 .chat{
+    display: flex;
+    flex-direction: column;
     width: 100%;
-    height: 94vh;
+    height: 91vh;
 }
 
 form input{
@@ -29,4 +31,53 @@ form button{
     background-color: #222293;
     color: #fff;
     border: 0;
+}
+
+#para{
+    background-color: #000;
+    border: 1px solid #fff;
+    padding: 5px 10px;
+    font-size: 15px;
+    color: #fff;
+}
+
+.MSGother {
+    display: flex;
+    justify-content: flex-start;
+}
+
+.MSGyou {
+    display: flex;
+    justify-content: flex-end;
+}
+
+.other{
+    width: max-content;
+    padding: 5px 10px;
+    border-radius: 0px 20px 20px 20px ;
+    background: linear-gradient(to top left, #2828b6, #191a64);
+    font-size: 18px;
+    margin: 10px 20px;
+    color: #fff;
+}
+
+.you{
+    justify-content: flex-end;
+    width: max-content;
+    padding: 5px 10px;
+    border-radius: 20px 0px 20px 20px ;
+    background: linear-gradient(to top left, #4545c7, #525378);
+    font-size: 18px;
+    margin: 10px 20px;
+    color: #fff;
+}
+
+.chat p, label{
+    margin: 0;
+    padding: 0;
+}
+
+.chat label{
+    font-weight: 800;
+    color: #ede6e665;
 }

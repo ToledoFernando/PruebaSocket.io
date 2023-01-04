@@ -24,6 +24,17 @@ io.on("connection", (socket) => {
     console.log(username);
   });
 
+  socket.on("newMessage", (data) => {
+    const destino = username.filter((usuario) => usuario.name === data.para);
+    const mensaje = {
+      id: data.id,
+      desde: data.name,
+      msg: data.mensaje,
+    };
+    if (destino.length) return io.to(destino[0].id).emit("newMensaje", mensaje);
+    return;
+  });
+
   socket.on("disconnect", (e) => {
     username = username.filter((usuario) => usuario.id != socket.id);
     console.log("User disconnect");
